@@ -10,8 +10,8 @@ import ErrorBoundary from './components/ErrorBoundary'
 
 export default function Home() {
   return (
-    <>
-      <ErrorBoundary>
+    <main className="min-h-screen">
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
         <Hero />
         <Usecase />
         <HowItWorks />
@@ -21,6 +21,6 @@ export default function Home() {
         <Calltoaction />
         <Footer />
       </ErrorBoundary>
-    </>
+    </main>
   )
 }
