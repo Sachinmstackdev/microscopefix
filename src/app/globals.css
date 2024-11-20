@@ -4,18 +4,39 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans);
+}
+
+/* Use the fonts */
+.sans {
+  font-family: var(--font-dm-sans);
+}
+
+.serif-display {
+  font-family: var(--font-dm-serif-display);
+}
+
+.serif-text {
+  font-family: var(--font-dm-serif-text);
+}
+
+@font-face {
+  font-family: 'DM_Serif_Display_Italic';
+  src: url('/fonts/FontsFree-Net-DMSerifDisplay-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
